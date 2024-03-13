@@ -11,7 +11,7 @@ import torch.nn as nn
 
 from data_generator import create_dataloader
 from utils import categorical_crossentropy_color, merge_lab
-from model import Zhang_Cla_Lab
+from model import Simple_UNet_Lab
 from config import (train_root, val_root,
                     device, epochs, lr, 
                     train_batch_size, val_batch_size,
@@ -130,7 +130,7 @@ def main():
     train_loader = create_dataloader(train_root, batch_size=train_batch_size, shuffle=True)
     val_loader = create_dataloader(val_root, batch_size=val_batch_size, shuffle=False)
 
-    model = Zhang_Cla_Lab().to(device)
+    model = Simple_UNet_Lab().to(device)
     criterion = categorical_crossentropy_color
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 

@@ -31,7 +31,7 @@ save_dir = "exp_Simple_UNet_Clas"
 
 train_root = "/kaggle/input/aio-coco-stuff/train2017/train2017"
 val_root = "/kaggle/input/aio-coco-stuff/val2017/val2017"
-train_batch_size = 32
+train_batch_size = 16
 val_batch_size = 8
 
 # Save weight
