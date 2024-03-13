@@ -27,7 +27,7 @@ lr = 5e-4
 train_num_max = 2000
 val_num_max = 200
 pretrained = None
-save_dir = "exp_Zhang_Cla_Lab"
+save_dir = "exp_Simple_UNet_Clas"
 
 train_root = "/kaggle/input/aio-coco-stuff/train2017/train2017"
 val_root = "/kaggle/input/aio-coco-stuff/val2017/val2017"
@@ -47,10 +47,10 @@ else:
 
 # Use WanDB
 use_wandb = True 
-wandb_proj_name = "Zhang_Cla_Lab"
+wandb_proj_name = "Simple_UNet_Clas"
 wandb_config = {
     "dataset": "coco-stuff",
-    "model": "Zhang_Cla_Lab",
+    "model": "Simple_UNet_Clas",
     "epochs": epochs,
     "lr": lr,
     "criterion": "categorical_crossentropy",
